@@ -9,19 +9,6 @@ class point2d:
         return self.x == other.x and self.y == other.y
     def rest(self, num):
         return point2d(self.x % num, self.y % num)
-    
-class point3d:
-    def __init__(self, i_x=0.0, i_y=0.0, i_z=0.0) -> None:
-        self.x = i_x
-        self.y = i_y
-        self.z = i_z
-
-    def __add__(self, other):
-        return point2d(self.x + other.x, self.y + other.y, self.z + other.z)
-    def __eq__(self, other):
-        return self.x == other.x and self.y == other.y and self.z == other.z
-    def rest(self, num):
-        return point2d(self.x % num, self.y % num, self.z & num)
 
 class game_info:
     class snake_info:
